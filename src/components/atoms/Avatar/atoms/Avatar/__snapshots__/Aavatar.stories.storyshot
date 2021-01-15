@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Design System/Atoms/Display/Avatar Default 1`] = `
+<div
+  className="Avatarstyle__Wrapper-r3y0qb-0 iIEdLq"
+>
+  <picture
+    className="Avatarstyle__Picture-r3y0qb-1 jtUNvh"
+  >
+    <img
+      alt="alt"
+      className="Avatarstyle__Avatar-r3y0qb-2 euYnRW"
+      src="http://rgo4.com/files/attach/images/2681740/158/890/029/afd813f3b8f37d0b37fa527c2052109a.jpg"
+    />
+  </picture>
+</div>
+`;
