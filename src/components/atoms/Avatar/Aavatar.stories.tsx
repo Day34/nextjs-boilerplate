@@ -1,14 +1,14 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
-import { AvatarPorps } from './Avatar.type';
+import { AvatarProps } from './Avatar.type';
 import Avatar from './Avatar';
 
 export default {
-  title: 'Design System/Atoms/Display/Avatar',
+  title: 'Design System/01-Atoms/Display/Avatar',
   component: Avatar,
 } as Meta;
 
-const Template: Story<AvatarPorps> = ({ src, alt }: AvatarPorps) => <Avatar src={src} alt={alt} />;
+const Template: Story<AvatarProps> = ({ src, alt }: AvatarProps) => <Avatar src={src} alt={alt} />;
 
 export const Default = Template.bind({});
 Default.args = {

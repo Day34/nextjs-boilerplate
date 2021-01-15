@@ -5,7 +5,6 @@ import * as T from './type';
 
 const buildHeaders = (headers?: { [k: string]: string }) => {
   return {
-    // Accept: 'application/json',
     'Content-Type': 'application/json',
     ...headers,
   };
@@ -20,10 +19,15 @@ const buildParams = (query?: any) => {
 };
 
 const handleResponse = (response: AxiosResponse) => {
-  printInfo(response);
+  // printInfo(response);
 
-  if (response.status >= 200 && response.status <= 204 && response.data.success) {
-    return Promise.resolve(response.data.data);
+  // api 2.0에서 적용해야함
+  // if (response.status >= 200 && response.status <= 204 && response.data.success) {
+  //   return Promise.resolve(response.data.data);
+  // }
+
+  if (response.status >= 200 && response.status <= 204) {
+    return Promise.resolve(response.data);
   }
 
   return Promise.reject(response.data.error);

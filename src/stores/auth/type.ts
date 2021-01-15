@@ -108,6 +108,7 @@ export enum ProviderType {
   EMAIL = 'email',
   GOOGLE = 'google',
   FACEBOOK = 'facebook',
+  KAKAO = 'kakao',
   APPLE = 'apple',
 }
 
