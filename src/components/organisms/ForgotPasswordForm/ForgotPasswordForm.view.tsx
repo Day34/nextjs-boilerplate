@@ -1,16 +1,18 @@
 import React from 'react';
-import * as T from './SignUpForm.type';
 import Avatar from '@material-ui/core/Avatar';
-import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
-import Container from '@material-ui/core/Container';
 import { useTranslation } from '@helpers/i18n';
 import { AuthStatus } from '@types/linkTypes';
+import { useStyles } from '../SignUpForm/SignUpForm.style';
+import InputText from '@atoms/InputText';
+import InputButton from '@atoms/InputButton';
+import * as T from './ForgotPasswordForm.type';
 
 const ForgotPasswordFormView = ({ emailStatus, onPropEmailCheck, onPropProcess }: T.ForgotPasswordFormViewProps) => {
+  const style = useStyles();
+
   const { t } = useTranslation();
 
   const emailHelperText = () => {
@@ -25,42 +27,41 @@ const ForgotPasswordFormView = ({ emailStatus, onPropEmailCheck, onPropProcess }
   };
 
   return (
-    <Container component="main" maxWidth="xs">
-      <div>
+    <div className={style.paper}>
+      <div className={style.header}>
         <Avatar>
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
-          {t('forgotPassword.title')}
+          {t('auth.forgotPassword.title')}
         </Typography>
-        <form noValidate>
-          <Grid container spacing={2}>
-            <Grid item xs={12}>
-              <TextField
-                error={emailStatus !== AuthStatus.none}
-                variant="outlined"
-                margin="normal"
-                required
-                fullWidth
-                id="email"
-                label={t('validation.email.title')}
-                placeholder={t('validation.email.placeholder')}
-                helperText={emailHelperText()}
-                name="email"
-                autoComplete="email"
-                autoFocus
-                onChange={event => {
-                  onPropEmailCheck(event.target.value.trim());
-                }}
-              />
-            </Grid>
-          </Grid>
-          <Button type="submit" fullWidth variant="contained" color="primary" onClick={onPropProcess}>
-            {t('forgotPassword.process')}
-          </Button>
-        </form>
       </div>
-    </Container>
+      <Grid container spacing={2} className={style.body}>
+        <Grid item xs={12}>
+          <InputText
+            required
+            label={t('validation.email.title')}
+            placeholder={t('validation.email.placeholder')}
+            error={emailStatus !== AuthStatus.none}
+            helperText={emailHelperText()}
+            variant="outlined"
+            fullWidth
+            margin="normal"
+            onChange={event => {
+              onPropEmailCheck(event.target.value.trim());
+            }}
+          />
+        </Grid>
+      </Grid>
+      <div className={style.footer}>
+        <InputButton variant="contained" color="primary" fullWidth className={style.process} onClick={onPropProcess}>
+          {t('auth.forgotPassword.process')}
+        </InputButton>
+        <InputButton variant="contained" color="primary" fullWidth className={style.process} onClick={onPropProcess}>
+          {t('auth.forgotPassword.process')}
+        </InputButton>
+      </div>
+    </div>
   );
 };
 

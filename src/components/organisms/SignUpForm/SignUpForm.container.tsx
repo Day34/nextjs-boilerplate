@@ -4,7 +4,7 @@ import moment from 'moment-timezone';
 moment.tz.setDefault('Asia/Seoul');
 import { AuthStatus } from '@types/linkTypes';
 import { checkNameKrEn, checkEmail, checkPasswordHigh } from '@helpers/RegexHelper';
-import SignInFormView from '@organisms/SignInForm/SignInForm.view';
+import SignInFormView from '../SignInForm/SignInForm.view';
 
 const SignUpFormContainer = () => {
   const [state, setState] = useState({

@@ -1,6 +1,6 @@
 import React from 'react';
-import * as S from './Avatar.style';
 import * as T from './Avatar.type';
+import * as S from './Avatar.style';
 
 const Avatar = ({ src, alt }: T.AvatarProps) => (
   <S.Wrapper>

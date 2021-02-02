@@ -36,12 +36,46 @@ export const SupportMultiCategory = [
 
 export const SupportTabs = [
   {
-    title: 'tab1',
+    label: 'tab1',
   },
   {
-    title: 'tab2',
+    label: 'tab2',
   },
   {
-    title: 'tab3',
+    label: 'tab3',
   },
 ];
+
+export const SupportScrollTabs = [
+  {
+    label: 'tab1',
+  },
+  {
+    label: 'tab2',
+  },
+  {
+    label: 'tab3',
+  },
+  {
+    label: 'tab4',
+  },
+  {
+    label: 'tab5',
+  },
+  {
+    label: 'tab6',
+  },
+  {
+    label: 'tab7',
+  },
+  {
+    label: 'tab8',
+  },
+  {
+    label: 'tab9',
+  },
+  {
+    label: 'tab10',
+  },
+];
+export const Introduce = 'qjekrjqlwrjeqlwjkqjlkerjqlw';

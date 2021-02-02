@@ -12,7 +12,7 @@ const SignInFormContainer = () => {
   });
 
   const onSns = (provider: ProviderType) => {
-    console.log('onEmailCheck');
+    console.log(provider);
   };
 
   const onEmailCheck = (value: string) => {

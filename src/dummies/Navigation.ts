@@ -29,25 +29,7 @@ export const MenuNavigation = [
   },
 ];
 
-export const FooterNavigation1 = [
-  {
-    title: 'title1',
-    items: [{ title: 'title1', url: 'link1', icon: null }],
-  },
-  {
-    title: 'title2',
-    items: [
-      { title: 'title1', url: 'link1', icon: null },
-      { title: 'title2', url: 'link1', icon: null },
-    ],
-  },
-  {
-    title: 'title3',
-    items: [{ title: 'title1', url: 'link1', icon: null }],
-  },
-];
-
-export const FooterNavigation2 = [
+export const FooterNavigation = [
   {
     title: '소개',
     url: '#',
@@ -68,18 +50,30 @@ export const FooterNavigation2 = [
 
 export const Navigation = [
   {
-    title: 'title1',
-    url: 'link1',
+    title: '링크1',
+    url: '#',
+    icon: null,
+    items: [
+      {
+        title: '링크1-1',
+        url: '#',
+        icon: null,
+        items: [
+          { title: '링크1-1-1', url: '#', icon: null },
+          { title: '링크1-1-2', url: '#', icon: null },
+        ],
+      },
+      { title: '링크1-2', url: '#', icon: null },
+    ],
+  },
+  {
+    title: '링크2',
+    url: '#',
     icon: null,
   },
   {
-    title: 'title2',
-    url: 'link2',
-    icon: null,
-  },
-  {
-    title: 'title3',
-    url: 'link3',
+    title: '링크3',
+    url: '#',
     icon: null,
   },
 ];

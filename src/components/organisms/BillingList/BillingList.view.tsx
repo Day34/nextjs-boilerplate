@@ -1,22 +1,13 @@
 import React from 'react';
-import * as T from './BillingList.type';
-import * as S from './BillingList.style';
 import { DataGrid, ValueFormatterParams } from '@material-ui/data-grid';
-import Button from '@material-ui/core/Button';
 import moment from 'moment-timezone';
-import IconButton from '@material-ui/core/IconButton';
-import AssessmentIcon from '@material-ui/icons/Assessment';
-import VisibilityIcon from '@material-ui/icons/Visibility';
-import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
-import LockIcon from '@material-ui/icons/Lock';
-import EditIcon from '@material-ui/icons/Edit';
-import LockOpenIcon from '@material-ui/icons/LockOpen';
-import LinkIcon from '@material-ui/icons/Link';
-import LinkOffIcon from '@material-ui/icons/LinkOff';
-import { ExpansionPanel, FormControl, FormLabel, Grid, Input, MenuItem, Select } from '@material-ui/core';
-import Container from '@material-ui/core/Container';
+import InputButton from '@atoms/InputButton';
+import * as T from './BillingList.type';
+import { useStyles } from '../LinkRank/LinkRank.style';
 
 const BillingListView = ({ isLoading, rows, onExtend }: T.BillingListProps) => {
+  const style = useStyles();
+
   const currencyFormatter = new Intl.NumberFormat('ko-KR', {
     style: 'currency',
     currency: 'KRW',
@@ -30,9 +21,9 @@ const BillingListView = ({ isLoading, rows, onExtend }: T.BillingListProps) => {
       renderCell: (params: ValueFormatterParams) => (
         <>
           {params.value}
-          <Button type="button" variant="contained" color="primary" onClick={onExtend}>
+          <InputButton type="button" variant="contained" color="primary" onClick={onExtend}>
             자동결제 해지
-          </Button>
+          </InputButton>
         </>
       ),
     },
@@ -71,7 +62,7 @@ const BillingListView = ({ isLoading, rows, onExtend }: T.BillingListProps) => {
     {
       field: 'serviceStatus',
       headerName: '상태',
-      width: 200,
+      width: 100,
       headerAlign: 'center',
       align: 'center',
     },
@@ -79,20 +70,22 @@ const BillingListView = ({ isLoading, rows, onExtend }: T.BillingListProps) => {
 
   return (
     <div>
-      <S.TableStyles style={{ width: '100%', height: 1000 }}>
-        <DataGrid
-          rows={rows}
-          columns={columns}
-          pageSize={10}
-          rowCount={100}
-          disableColumnMenu
-          // rowsPerPageOptions={[5, 10, 20]}
-          // paginationMode="server"
-          loading={isLoading}
-          // onPageChange={handlePageChange}
-          disableClickEventBubbling
-        />
-      </S.TableStyles>
+      <div className={style.wrapper}>
+        <div className={style.table2}>
+          <DataGrid
+            rows={rows}
+            columns={columns}
+            pageSize={10}
+            rowCount={100}
+            disableColumnMenu
+            // rowsPerPageOptions={[5, 10, 20]}
+            // paginationMode="server"
+            loading={isLoading}
+            // onPageChange={handlePageChange}
+            disableClickEventBubbling
+          />
+        </div>
+      </div>
     </div>
   );
 };

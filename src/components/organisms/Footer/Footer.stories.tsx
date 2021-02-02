@@ -1,6 +1,6 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
-import { FooterNavigation2 as dummyNavigation } from '@dummies/Navigation';
+import { FooterNavigation as dummyNavigation } from '@dummies/Navigation';
 import { FooterProps } from './Footer.type';
 import Footer from '.';
 

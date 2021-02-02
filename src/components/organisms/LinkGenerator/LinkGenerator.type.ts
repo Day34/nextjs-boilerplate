@@ -1,8 +1,9 @@
 export interface LinkGeneratorViewProps {
   step: number;
-  steps: string[];
   onPrev: () => void;
   onNext: () => void;
+  nidaLink: string;
+  targetLink: string;
 }
 
 export interface LinkGeneratorProps {}

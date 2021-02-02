@@ -24,6 +24,7 @@
     "@material-ui/styles": "^4.11.2",
     "axios": "^0.21.1",
     "chart.js": "^2.9.4",
+    "jss-plugin-template": "^10.5.1",
     "moment-timezone": "^0.5.32",
     "next": "10.0.5",
     "next-i18next": "^7.0.1",

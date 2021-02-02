@@ -1,10 +1,12 @@
 import React from 'react';
-import * as T from './LinkRecommand.type';
-import * as S from './LinkRecommand.style';
 import { DataGrid, ValueFormatterParams } from '@material-ui/data-grid';
-import Button from '@material-ui/core/Button';
+import InputButton from '@atoms/InputButton';
+import * as T from './LinkRecommand.type';
+import { useStyles } from '../LinkRank/LinkRank.style';
 
 const LinkRecommandView = ({ isLoading, rows, total, onPropPageChange, onClickStatus }: T.LinkRecommandProps) => {
+  const style = useStyles();
+
   const columns = [
     {
       field: 'recommend_url',
@@ -29,15 +31,15 @@ const LinkRecommandView = ({ isLoading, rows, total, onPropPageChange, onClickSt
           {(params.value as string) === '사용중' ? (
             '사용중'
           ) : (
-            <Button
+            <InputButton
               type="button"
-              disabled={(params.value as string) === '현재선택'}
               variant="contained"
               color="primary"
+              disabled={(params.value as string) === '현재선택'}
               onClick={() => onClickStatus(params.value as string)}
             >
               {params.value}
-            </Button>
+            </InputButton>
           )}
         </div>
       ),
@@ -53,22 +55,24 @@ const LinkRecommandView = ({ isLoading, rows, total, onPropPageChange, onClickSt
           <br />
           현재 상태 (비로그인) 에서도 모든 URL 을 발급/테스트 신청할 수 있습니다.
         </p>
-        <Button type="button">회원 레벨 제도에 대하여</Button>
+        <InputButton type="button">회원 레벨 제도에 대하여</InputButton>
       </div>
-      <S.TableStyles style={{ width: '100%', height: 1000 }}>
-        <DataGrid
-          rows={rows}
-          columns={columns}
-          pageSize={10}
-          rowCount={total}
-          disableColumnMenu
-          // rowsPerPageOptions={[5, 10, 20]}
-          // paginationMode="server"
-          loading={isLoading}
-          // onPageChange={handlePageChange}
-          disableClickEventBubbling
-        />
-      </S.TableStyles>
+      <div className={style.wrapper}>
+        <div className={style.table}>
+          <DataGrid
+            rows={rows}
+            columns={columns}
+            pageSize={10}
+            rowCount={total}
+            disableColumnMenu
+            // rowsPerPageOptions={[5, 10, 20]}
+            // paginationMode="server"
+            loading={isLoading}
+            // onPageChange={handlePageChange}
+            disableClickEventBubbling
+          />
+        </div>
+      </div>
     </div>
   );
 };

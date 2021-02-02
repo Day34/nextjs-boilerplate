@@ -1,33 +1,41 @@
-import styled from 'styled-components';
+import { makeStyles } from '@material-ui/core/styles';
 
-export const Container = styled.div``;
+export const useStyles = makeStyles(theme => ({
+  // buttons: {
+  //   display: 'flex',
+  //   alignItems: 'center',
+  //   justifyContent: 'space-between',
+  // },
 
-export const Logo = styled.div``;
-
-export const TableStyles = styled.div`
-  .MuiTableCell-root {
-    display: flex;
-    box-sizing: border-box;
-    align-items: center;
-  }
-
-  .ReactVirtualized__Table__headerRow {
-    display: flex;
-    align-items: center;
-
-    .MuiTableCell-head {
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-  }
-
-  .ReactVirtualized__Table__row {
-    display: flex;
-    align-items: center;
-  }
-
-  .ReactVirtualized__Table__headerColumn,
-  .ReactVirtualized__Table__rowColumn {
-    flex: 1;
-  }
-`;
+  disabled: {
+    '& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline': {
+      // 기본 테두리 색상
+      // borderColor: "green"
+    },
+    '&:hover .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline': {
+      // borderColor: "red"
+    },
+    '& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline': {
+      // borderColor: 'purple',
+    },
+    '& .MuiOutlinedInput-input': {
+      // 기본 텍스트 색상
+      color: 'black',
+    },
+    '&:hover .MuiOutlinedInput-input': {
+      // color: 'red',
+    },
+    '& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-input': {
+      // color: 'purple',
+    },
+    '& .MuiInputLabel-outlined': {
+      // color: 'green',
+    },
+    '&:hover .MuiInputLabel-outlined': {
+      // color: 'red',
+    },
+    '& .MuiInputLabel-outlined.Mui-focused': {
+      // color: 'purple',
+    },
+  },
+}));

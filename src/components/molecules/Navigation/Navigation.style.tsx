@@ -1,13 +1,13 @@
 import styled from 'styled-components';
-import * as T from './Navigation.type';
+import { NavigationProps } from './Navigation.type';
 
-export const Container = styled.nav<T.StyleContainerProps>`
+export const Container = styled.nav<NavigationProps>`
   display: flex;
   flex-direction: ${props => (props.direction === 'vertical' ? 'column' : undefined)};
-  //padding: 16px;
+  padding: 16px;
 
-  // a + a {
-  //   margin-left: ${props => (props.direction === 'horizontal' ? `24px` : undefined)};
-  //   margin-top: ${props => (props.direction !== 'horizontal' ? `24px` : undefined)};
-  // }
+  > div + div {
+    margin-left: ${props => (props.direction === 'horizontal' ? `48px` : undefined)};
+    margin-top: ${props => (props.direction !== 'horizontal' ? `24px` : undefined)};
+  }
 `;

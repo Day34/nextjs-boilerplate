@@ -1,10 +1,12 @@
 import React from 'react';
 import * as T from './LinkRank.type';
-import * as S from './LinkRank.style';
-import { DataGrid, ValueFormatterParams } from '@material-ui/data-grid';
+import { useStyles } from './LinkRank.style';
+import { ColParams, DataGrid, ValueFormatterParams } from '@material-ui/data-grid';
 import moment from 'moment-timezone';
 
 const LinkRankView = ({ isLoading, rows, total, onPropPageChange }: T.LinkRankViewProps) => {
+  const style = useStyles();
+
   const columns = [
     {
       field: 'link_raw',
@@ -28,24 +30,26 @@ const LinkRankView = ({ isLoading, rows, total, onPropPageChange }: T.LinkRankVi
   ];
 
   return (
-    <S.TableStyles style={{ width: '100%', height: 1000 }}>
-      {rows ? (
-        <DataGrid
-          rows={rows}
-          columns={columns}
-          pageSize={10}
-          rowCount={total}
-          disableColumnMenu
-          // rowsPerPageOptions={[5, 10, 20]}
-          // paginationMode="server"
-          loading={isLoading}
-          onPageChange={onPropPageChange}
-          disableClickEventBubbling
-        />
-      ) : (
-        <div>없네</div>
-      )}
-    </S.TableStyles>
+    <div className={style.wrapper}>
+      <div className={style.table}>
+        {rows ? (
+          <DataGrid
+            rows={rows}
+            columns={columns}
+            pageSize={10}
+            rowCount={total}
+            disableColumnMenu
+            // rowsPerPageOptions={[5, 10, 20]}
+            // paginationMode="server"
+            loading={isLoading}
+            onPageChange={onPropPageChange}
+            disableClickEventBubbling
+          />
+        ) : (
+          <div>없네</div>
+        )}
+      </div>
+    </div>
   );
 };
 

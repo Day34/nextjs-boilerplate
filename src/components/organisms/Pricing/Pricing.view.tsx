@@ -1,19 +1,8 @@
 import React from 'react';
-import * as T from './Pricing.type';
-import * as S from './Pricing.style';
-import AppBar from '@material-ui/core/AppBar';
-import Button from '@material-ui/core/Button';
-import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardHeader from '@material-ui/core/CardHeader';
-import Grid from '@material-ui/core/Grid';
+import { Card, CardActions, CardContent, CardHeader, Grid, Container, Typography } from '@material-ui/core';
 import StarIcon from '@material-ui/icons/StarBorder';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Link from '@material-ui/core/Link';
-import Container from '@material-ui/core/Container';
 import { useTranslation } from '@helpers/i18n';
+import InputButton from '@atoms/InputButton';
 
 const PricingView = () => {
   const { t } = useTranslation();
@@ -92,9 +81,9 @@ const PricingView = () => {
                   </ul>
                 </CardContent>
                 <CardActions>
-                  <Button fullWidth variant={tier.buttonVariant} color="primary">
+                  <InputButton variant={tier.buttonVariant} color="primary" fullWidth>
                     {tier.buttonText}
-                  </Button>
+                  </InputButton>
                 </CardActions>
               </Card>
             </Grid>

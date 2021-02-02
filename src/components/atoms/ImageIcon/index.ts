@@ -1,3 +1,3 @@
-import ImageIconContainer from './ImageIcon.container';
+import ImageIcon from './ImageIcon';
 
-export default ImageIconContainer;
+export default ImageIcon;

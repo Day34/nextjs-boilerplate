@@ -5,7 +5,7 @@ import { MenuNavigationDropdownProps } from './MenuNavigationDropdown.type';
 import MenuNavigationDropdown from '.';
 
 export default {
-  title: 'Design System/02-Molecules/Display/MenuNavigationDropdown',
+  title: 'Design System/02-Molecules/SimpleNavigationItem/MenuNavigationDropdown',
   component: MenuNavigationDropdown,
   argTypes: {
     items: { control: { type: 'object' }, defaultValue: dummyMenuNavigation[1].items },

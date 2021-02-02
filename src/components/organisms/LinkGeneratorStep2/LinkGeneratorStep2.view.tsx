@@ -1,30 +1,44 @@
 import React from 'react';
+import { Grid, Typography } from '@material-ui/core';
 import { useTranslation } from '@helpers/i18n';
-import { Button } from '@material-ui/core';
-import * as S from './LinkGeneratorStep2.style';
+import InputText from '@atoms/InputText';
+import InputButton from '@atoms/InputButton';
 import * as T from './LinkGeneratorStep2.type';
+import { useStyles } from '../LinkGeneratorStep1/LinkGeneratorStep1.style';
 
 const LinkGeneratorStep2View = ({ nidaLink, onPropBack, onPropEnter }: T.LinkGeneratorStep2ViewProps) => {
+  const style = useStyles();
   const { t } = useTranslation();
 
   return (
     <>
-      <S.Title variant="h3">{nidaLink}</S.Title>
-      <S.Input
-        fullWidth
-        id="outlined-error-helper-text"
+      <Typography variant="h3" className={style.title}>
+        {nidaLink}
+      </Typography>
+      <InputText
+        placeholder={t('linkGenerator.step2.form.placeholder')}
         variant="outlined"
-        defaultValue={t('linkGenerator.step2.form.placeholder')}
-        inputProps={{ readOnly: true }}
+        fullWidth
+        margin="normal"
+        readyOnly
+        InputProps={{
+          classes: {
+            input: style.formTextInput,
+          },
+        }}
       />
-      <S.ActionContainer>
-        <Button variant="contained" onClick={onPropBack}>
-          {t('linkGenerator.step2.prev')}
-        </Button>
-        <Button variant="contained" onClick={onPropEnter}>
-          {t('linkGenerator.step2.next')}
-        </Button>
-      </S.ActionContainer>
+      <Grid container spacing={2} justify="center">
+        <Grid item>
+          <InputButton variant="contained" color="primary" onClick={onPropBack}>
+            {t('linkGenerator.step2.prev')}
+          </InputButton>
+        </Grid>
+        <Grid item>
+          <InputButton variant="contained" color="secondary" onClick={onPropEnter}>
+            {t('linkGenerator.step2.next')}
+          </InputButton>
+        </Grid>
+      </Grid>
     </>
   );
 };

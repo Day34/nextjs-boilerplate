@@ -1,8 +1,17 @@
-import styled from 'styled-components';
+// .MuiTypography-displayBlock
 
-export const Container = styled.div`
-  border: 1px solid black;
-  height: 250px;
-`;
+import { makeStyles } from '@material-ui/core/styles';
 
-export const Navigation = styled.div``;
+export const useStyles = makeStyles(theme => ({
+  stepper: {
+    [theme.breakpoints.down('sm')]: {
+      padding: theme.spacing(3, 0),
+    },
+
+    '& .MuiStepLabel-label': {
+      [theme.breakpoints.down('xs')]: {
+        fontSize: '0.5rem',
+      },
+    },
+  },
+}));

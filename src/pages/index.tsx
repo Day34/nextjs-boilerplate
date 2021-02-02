@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from '@helpers/i18n';
 import { Grid, Typography } from '@material-ui/core';
 import Box from '@material-ui/core/Box';
-import Header from '@organisms/Header';
+import Header from '../components/organisms/Header';
 
 const Index = () => {
   const { t, i18n } = useTranslation();

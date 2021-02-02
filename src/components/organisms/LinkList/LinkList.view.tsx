@@ -1,22 +1,19 @@
 import React from 'react';
-import * as T from './LinkList.type';
-import * as S from './LinkList.style';
 import { DataGrid, ValueFormatterParams } from '@material-ui/data-grid';
-import Button from '@material-ui/core/Button';
 import moment from 'moment-timezone';
-import IconButton from '@material-ui/core/IconButton';
+import { IconButton } from '@material-ui/core';
 import AssessmentIcon from '@material-ui/icons/Assessment';
 import VisibilityIcon from '@material-ui/icons/Visibility';
-import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
-import LockIcon from '@material-ui/icons/Lock';
 import EditIcon from '@material-ui/icons/Edit';
-import LockOpenIcon from '@material-ui/icons/LockOpen';
 import LinkIcon from '@material-ui/icons/Link';
-import LinkOffIcon from '@material-ui/icons/LinkOff';
-import { ExpansionPanel, FormControl, FormLabel, Grid, Input, MenuItem, Select } from '@material-ui/core';
-import Container from '@material-ui/core/Container';
+import InputButton from '@atoms/InputButton';
+
+import * as T from './LinkList.type';
+import { useStyles } from '../LinkRank/LinkRank.style';
 
 const LinkListView = ({ isLoading, rows, onStatus, onLink, onEdit, onPublic, onReport }: T.LinkRecommandProps) => {
+  const style = useStyles();
+
   const columns = [
     {
       field: 'url',
@@ -58,9 +55,14 @@ const LinkListView = ({ isLoading, rows, onStatus, onLink, onEdit, onPublic, onR
           {(params.value as string) === '사용중' ? (
             '사용중'
           ) : (
-            <Button type="button" variant="contained" color="primary" onClick={() => onStatus(params.value as string)}>
+            <InputButton
+              type="button"
+              variant="contained"
+              color="primary"
+              onClick={() => onStatus(params.value as string)}
+            >
               {params.value}
-            </Button>
+            </InputButton>
           )}
         </div>
       ),
@@ -92,20 +94,22 @@ const LinkListView = ({ isLoading, rows, onStatus, onLink, onEdit, onPublic, onR
 
   return (
     <div>
-      <S.TableStyles style={{ width: '100%', height: 1000 }}>
-        <DataGrid
-          rows={rows}
-          columns={columns}
-          pageSize={10}
-          rowCount={100}
-          disableColumnMenu
-          // rowsPerPageOptions={[5, 10, 20]}
-          // paginationMode="server"
-          loading={isLoading}
-          // onPageChange={handlePageChange}
-          disableClickEventBubbling
-        />
-      </S.TableStyles>
+      <div className={style.wrapper}>
+        <div className={style.table2}>
+          <DataGrid
+            rows={rows}
+            columns={columns}
+            pageSize={10}
+            rowCount={100}
+            disableColumnMenu
+            // rowsPerPageOptions={[5, 10, 20]}
+            // paginationMode="server"
+            loading={isLoading}
+            // onPageChange={handlePageChange}
+            disableClickEventBubbling
+          />
+        </div>
+      </div>
     </div>
   );
 };

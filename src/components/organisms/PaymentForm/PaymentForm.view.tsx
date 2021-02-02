@@ -1,38 +1,68 @@
 import React from 'react';
-import * as T from './PaymentForm.type';
-import * as S from './PaymentForm.style';
-import { Button, TextField } from '@material-ui/core';
-import { AuthStatus } from '@types/linkTypes';
-import Grid from '@material-ui/core/Grid';
+import { Grid, InputAdornment } from '@material-ui/core';
 import { useTranslation } from '@helpers/i18n';
-import InputText from '@molecules/InputText';
-import InputButton from '@molecules/InputButon';
+import InputText from '@atoms/InputText';
+import InputCheck from '@atoms/InputCheck';
+import { useStyles } from './PaymentForm.style';
+import InputButton from '@atoms/InputButton';
+import * as T from './PaymentForm.type';
 
 const PaymentFormView = ({ onPropPaymentForm }: T.PaymentFormViewProps) => {
+  const style = useStyles();
+
   const { t } = useTranslation();
 
   return (
     <>
-      <InputText inline={false} frameTitle="상품명" error={false} defaultValue="1개월 정기 이용권" variant="outlined" />
-      <InputText inline={false} frameTitle="링크" error={false} defaultValue="니다닷컴.좋아요.com" variant="outlined" />
       <InputText
-        inline={false}
-        frameTitle="기간"
-        error={false}
+        required
+        label={t('paymentForm.product')}
+        defaultValue="1개월 정기 이용권"
+        variant="outlined"
+        fullWidth
+        margin="normal"
+        readyOnly
+      />
+      <InputText
+        required
+        label={t('paymentForm.range')}
         defaultValue="2020-01-01 ~ 2020-01-31"
         variant="outlined"
+        fullWidth
+        margin="normal"
+        readyOnly
       />
-      <InputText inline={false} frameTitle="금액" error={false} defaultValue="9,900" variant="outlined" />
       <InputText
-        inline={false}
-        frameTitle="기타"
-        error={false}
-        defaultValue="매월 자동 결제 됩니다"
+        required
+        label={t('paymentForm.price')}
+        defaultValue="9,900원"
         variant="outlined"
+        fullWidth
+        margin="normal"
+        readyOnly
+        InputProps={{
+          endAdornment: (
+            <InputAdornment position="end" className={style.vat}>
+              {t('paymentForm.vat')}
+            </InputAdornment>
+          ),
+        }}
       />
-      <Button color="primary" variant="contained" onClick={onPropPaymentForm}>
-        결제하기
-      </Button>
+      <InputCheck
+        items={[{ label: t('paymentForm.tmp'), value: 'check' }]}
+        color="primary"
+        onChange={event => {
+          // onPropAgree(event.target.checked);
+        }}
+      />
+
+      <Grid container spacing={2} justify="center">
+        <Grid item>
+          <InputButton variant="contained" color="primary" onClick={onPropPaymentForm}>
+            {t('paymentForm.process')}
+          </InputButton>
+        </Grid>
+      </Grid>
     </>
   );
 };

@@ -5,7 +5,7 @@ import { MenuNavigationItemProps } from './MenuNavigationItem.type';
 import MenuNavigationItem from '.';
 
 export default {
-  title: 'Design System/02-Molecules/Display/MenuNavigationItem',
+  title: 'Design System/02-Molecules/SimpleNavigationItem/MenuNavigationItem',
   component: MenuNavigationItem,
   argTypes: {
     title: { control: { type: 'object' }, defaultValue: dummyMenuNavigation[1].title },
