@@ -4,14 +4,14 @@ import * as path from 'path';
 
 const NextI18NextInstance = new NextI18Next({
   browserLanguageDetection: false,
-  defaultLanguage: 'en',
+  defaultLanguage: 'ko',
   otherLanguages: ['ko'],
-  fallbackLng: 'en',
+  fallbackLng: 'ko',
   keySeparator: '.',
   localePath: path.resolve('./public/static/locales'),
   strictMode: false,
 });
 
-export const { appWithTranslation, useTranslation, withTranslation } = NextI18NextInstance;
+export const { appWithTranslation, useTranslation, withTranslation, i18n } = NextI18NextInstance;
 
 export const includeDefaultNamespaces = (namespaces: string[]) => ['common'].concat(namespaces);

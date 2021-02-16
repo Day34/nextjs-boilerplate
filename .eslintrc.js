@@ -17,6 +17,7 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
     project: './tsconfig.json',
+    createDefaultProgram: true,
   },
   plugins: ['@typescript-eslint', 'react', 'import'],
   extends: [
@@ -43,6 +44,10 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'import/prefer-default-export': 'off',
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+    'react-hooks/exhaustive-deps': 'warn',
+    'global-require': 'off',
+    'react/jsx-props-no-spreading': 'off',
+    '@typescript-eslint/no-empty-interface': 'off',
   },
   settings: {
     react: { version: 'detect' },

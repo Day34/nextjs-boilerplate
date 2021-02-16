@@ -230,6 +230,7 @@ const ResetCSS = createGlobalStyle`
     overflow-y: auto;
     resize: none;
   }
+
 `;
 
 export default ResetCSS;

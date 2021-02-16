@@ -1,17 +1,20 @@
 import Document, { DocumentContext, Head, Html, Main, NextScript } from 'next/document';
 import React from 'react';
-import { ServerStyleSheet } from 'styled-components';
+import { ServerStyleSheet as StyledComponentSheets } from 'styled-components';
+import { ServerStyleSheets as MaterialUiServerStyleSheets } from '@material-ui/styles';
 
 /* eslint-disable react/jsx-props-no-spreading */
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
-    const sheet = new ServerStyleSheet();
+    const styledComponentSheets = new StyledComponentSheets();
+    const materialUiServerStyleSheets = new MaterialUiServerStyleSheets();
     const originalRenderPage = ctx.renderPage;
 
     try {
       ctx.renderPage = () =>
         originalRenderPage({
-          enhanceApp: App => props => sheet.collectStyles(<App {...props} />),
+          enhanceApp: App => props =>
+            styledComponentSheets.collectStyles(materialUiServerStyleSheets.collect(<App {...props} />)),
         });
 
       const initialProps = await Document.getInitialProps(ctx);
@@ -20,19 +23,23 @@ export default class MyDocument extends Document {
         styles: (
           <>
             {initialProps.styles}
-            {sheet.getStyleElement()}
+            {styledComponentSheets.getStyleElement()}
+            {materialUiServerStyleSheets.getStyleElement()}
           </>
         ),
       };
     } finally {
-      sheet.seal();
+      styledComponentSheets.seal();
     }
   }
 
   render() {
     return (
       <Html>
-        <Head />
+        <Head>
+          <title>My page</title>
+          <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
+        </Head>
         <body>
           <Main />
           <NextScript />

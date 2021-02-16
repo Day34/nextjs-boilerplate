@@ -25,6 +25,7 @@ module.exports = {
           '@pages': './src/pages',
           '@stores': './src/stores',
           '@sagas': './src/sagas',
+          '@types': './src/types',
         },
       },
     ],
