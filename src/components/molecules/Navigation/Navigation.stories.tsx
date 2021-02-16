@@ -8,10 +8,7 @@ export default {
   title: 'Design System/02-Molecules/Navigation/Navigation',
   component: Navigation,
   argTypes: {
-    direction: {
-      control: { type: 'select', options: ['horizontal', 'vertical'] },
-      defaultValue: 'horizontal',
-    },
+    direction: { control: { type: 'select', options: ['horizontal', 'vertical'] }, defaultValue: 'horizontal' },
     items: { control: { type: 'object' }, defaultValue: dummyNavigation },
   },
 } as Meta;
