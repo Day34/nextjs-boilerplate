@@ -10,7 +10,7 @@ import InputText from '@atoms/InputText';
 import { AuthStatus } from '../../../types/linkTypes';
 import InputButton from '@atoms/InputButton';
 import Modal from '@molecules/Modal';
-import { useTranslation } from '../../../helpers/i18n';
+import { useTranslation } from '@helpers/i18n';
 
 const ModalReportImaginaryNumberView = ({ ...props }: T.ModalReportImaginaryNumberProps) => {
   const { t } = useTranslation();

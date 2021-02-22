@@ -4,7 +4,7 @@ import { ModalReportImaginaryNumberProps } from './ModalReportImaginaryNumber.ty
 import ModalReportImaginaryNumber from '.';
 
 export default {
-  title: 'Design System/03-Organisms/Display/ModalReportImaginaryNumber',
+  title: 'Design System/03-Organisms/Popup/ModalReportImaginaryNumber',
   component: ModalReportImaginaryNumber,
   argTypes: {
     open: { control: { type: 'boolean' }, defaultValue: true },

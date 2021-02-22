@@ -4,7 +4,7 @@ import { SignInFormProps } from './SignInForm.type';
 import SignInForm from '.';
 
 export default {
-  title: 'Design System/03-Organisms/Display/SignInForm',
+  title: 'Design System/03-Organisms/Auth/SignInForm',
   component: SignInForm,
 } as Meta;
 

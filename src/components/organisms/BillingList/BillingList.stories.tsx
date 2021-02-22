@@ -4,7 +4,7 @@ import { BillingListProps } from './BillingList.type';
 import BillingList from '.';
 
 export default {
-  title: 'Design System/03-Organisms/Display/BillingList',
+  title: 'Design System/03-Organisms/Account/BillingList',
   component: BillingList,
 } as Meta;
 

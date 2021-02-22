@@ -5,7 +5,7 @@ import LinkRank from '.';
 import { LinkRank as dummyLinkRank } from '@dummies/Link';
 
 export default {
-  title: 'Design System/03-Organisms/Display/LinkRank',
+  title: 'Design System/03-Organisms/Link/LinkRank',
   component: LinkRank,
   argTypes: {
     rows: { control: { type: 'object' }, defaultValue: dummyLinkRank },

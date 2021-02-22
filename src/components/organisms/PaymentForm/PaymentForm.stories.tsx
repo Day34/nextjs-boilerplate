@@ -4,7 +4,7 @@ import { PaymentFormProps } from './PaymentFormForm.type';
 import PaymentForm from '.';
 
 export default {
-  title: 'Design System/03-Organisms/Display/PaymentForm',
+  title: 'Design System/03-Organisms/Payment/PaymentForm',
   component: PaymentForm,
 } as Meta;
 

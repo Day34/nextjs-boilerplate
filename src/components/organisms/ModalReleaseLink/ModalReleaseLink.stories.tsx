@@ -4,7 +4,7 @@ import { ModalReleaseLinkProps } from './ModalReleaseLink.type';
 import ModalReleaseLink from '.';
 
 export default {
-  title: 'Design System/03-Organisms/Display/ModalReleaseLink',
+  title: 'Design System/03-Organisms/Popup/ModalReleaseLink',
   component: ModalReleaseLink,
   argTypes: {
     open: { control: { type: 'boolean' }, defaultValue: true },

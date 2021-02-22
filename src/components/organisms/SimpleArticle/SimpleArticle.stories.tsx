@@ -4,7 +4,7 @@ import { SimpleArticleProps } from './SimpleArticle.type';
 import SimpleArticle from './index';
 
 export default {
-  title: 'Design System/03-Organisms/Display/SimpleArticle',
+  title: 'Design System/03-Organisms/Post/SimpleArticle',
   component: SimpleArticle,
   argTypes: {
     html: { control: { type: 'string' }, defaultValue: '제목' },

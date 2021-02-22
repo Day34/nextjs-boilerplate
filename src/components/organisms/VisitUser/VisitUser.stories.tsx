@@ -4,7 +4,7 @@ import { VisitUserProps } from './VisitUser.type';
 import VisitUser from '.';
 
 export default {
-  title: 'Design System/03-Organisms/Display/VisitUser',
+  title: 'Design System/03-Organisms/Report/VisitUser',
   component: VisitUser,
 } as Meta;
 

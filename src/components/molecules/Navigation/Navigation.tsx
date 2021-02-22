@@ -22,11 +22,29 @@ const Navigation = ({ direction, items }: NavigationProps) => {
     );
   };
 
+  const rootLink = (item: any) => {
+    return (
+      <>
+        {item.items && item.items.length > 0 ? (
+          <Typography style={{ fontWeight: 'bold' }} component="span">
+            {item.title}
+          </Typography>
+        ) : (
+          <Link href={item.url || '#'}>
+            <Typography style={{ fontWeight: 'bold' }} component="span">
+              {item.title}
+            </Typography>
+          </Link>
+        )}
+      </>
+    );
+  };
+
   return (
     <S.Container direction={direction}>
       {items.map((item, index) => (
         <div>
-          <Typography style={{ fontWeight: 'bold' }}>{item.title}</Typography>
+          {rootLink(item)}
           {item.items && item.items.length > 0 && category(item.items)}
         </div>
       ))}

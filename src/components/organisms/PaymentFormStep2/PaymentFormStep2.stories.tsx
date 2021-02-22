@@ -4,7 +4,7 @@ import { PaymentFormStep2Props } from './PaymentFormStep2.type';
 import PaymentFormStep2 from '.';
 
 export default {
-  title: 'Design System/03-Organisms/Display/PaymentFormStep2',
+  title: 'Design System/03-Organisms/Payment/PaymentFormStep2',
   component: PaymentFormStep2,
 } as Meta;
 

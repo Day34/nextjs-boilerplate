@@ -4,7 +4,7 @@ import { AccountProps } from './Account.type';
 import Account from '.';
 
 export default {
-  title: 'Design System/03-Organisms/Display/Account',
+  title: 'Design System/03-Organisms/Account/Account',
   component: Account,
 } as Meta;
 

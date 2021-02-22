@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { NavigationProps } from './Navigation.type';
 
 export const Container = styled.nav<NavigationProps>`
@@ -8,6 +8,6 @@ export const Container = styled.nav<NavigationProps>`
 
   > div + div {
     margin-left: ${props => (props.direction === 'horizontal' ? `48px` : undefined)};
-    margin-top: ${props => (props.direction !== 'horizontal' ? `24px` : undefined)};
+    margin-top: ${props => (props.direction === 'vertical' ? `24px` : undefined)};
   }
 `;

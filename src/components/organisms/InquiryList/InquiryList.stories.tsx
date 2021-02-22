@@ -4,7 +4,7 @@ import { InquiryListProps } from './InquiryList.type';
 import InquiryList from '.';
 
 export default {
-  title: 'Design System/03-Organisms/Display/InquiryList',
+  title: 'Design System/03-Organisms/Support/InquiryList',
   component: InquiryList,
 } as Meta;
 

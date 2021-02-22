@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import InputText from '@atoms/InputText';
 import InputButton from '@atoms/InputButton';
 import Modal from '@molecules/Modal';
-import { useTranslation } from '../../../helpers/i18n';
+import { useTranslation } from '@helpers/i18n';
 
 const ModalChangePasswordView = ({ ...props }: T.ModalChangePasswordProps) => {
   const { t } = useTranslation();

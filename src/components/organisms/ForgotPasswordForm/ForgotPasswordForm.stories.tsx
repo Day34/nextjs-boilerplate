@@ -4,7 +4,7 @@ import { ForgotPasswordFormProps } from './ForgotPasswordForm.type';
 import ForgotPasswordForm from '.';
 
 export default {
-  title: 'Design System/03-Organisms/Display/ForgotPasswordForm',
+  title: 'Design System/03-Organisms/Auth/ForgotPasswordForm',
   component: ForgotPasswordForm,
 } as Meta;
 

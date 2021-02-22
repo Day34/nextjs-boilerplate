@@ -5,7 +5,7 @@ import SupportSingle from '.';
 import { Introduce as dummyIntroduce } from '@dummies/Supports';
 
 export default {
-  title: 'Design System/03-Organisms/Display/SupportSingle',
+  title: 'Design System/03-Organisms/Support/SupportSingle',
   component: SupportSingle,
   argTypes: {
     introduce: { control: { type: 'string' }, defaultValue: dummyIntroduce },

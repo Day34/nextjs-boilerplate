@@ -4,7 +4,7 @@ import { ModalWithdrawalProps } from './ModalWithdrawal.type';
 import ModalWithdrawal from '.';
 
 export default {
-  title: 'Design System/03-Organisms/Display/ModalWithdrawal',
+  title: 'Design System/03-Organisms/Popup/ModalWithdrawal',
   component: ModalWithdrawal,
   argTypes: {
     open: { control: { type: 'boolean' }, defaultValue: true },

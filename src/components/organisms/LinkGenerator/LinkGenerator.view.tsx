@@ -7,7 +7,7 @@ import LinkGeneratorStep1 from '../LinkGeneratorStep1';
 import LinkGeneratorStep2 from '../LinkGeneratorStep2';
 import LinkGeneratorStep3 from '../LinkGeneratorStep3';
 import LinkGeneratorStep4 from '../LinkGeneratorStep4';
-import { useTranslation } from '../../../helpers/i18n';
+import { useTranslation } from '@helpers/i18n';
 
 const LinkGeneratorView: FC<T.LinkGeneratorViewProps> = ({
   children,

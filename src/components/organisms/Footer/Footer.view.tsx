@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Navigation from '@molecules/Navigation';
+import Separator from '@molecules/Separator';
 import { useTranslation } from '@helpers/i18n';
 import { brandLife } from '@helpers/CompnayHelper';
 import * as S from './Footer.style';
@@ -18,7 +18,7 @@ const FooterView = ({ menus }: T.FooterProps) => {
       <S.FooterContainer>
         <S.FooterRow>
           <S.FooterNavigation>
-            <Navigation direction="horizontal" items={menus} />
+            <Separator items={menus} />
           </S.FooterNavigation>
         </S.FooterRow>
         <S.FooterRow>

@@ -4,7 +4,7 @@ import { InquiryDetailProps } from './InquiryDetail.type';
 import InquiryDetail from '.';
 
 export default {
-  title: 'Design System/03-Organisms/Display/InquiryDetail',
+  title: 'Design System/03-Organisms/Support/InquiryDetail',
   component: InquiryDetail,
 } as Meta;
 

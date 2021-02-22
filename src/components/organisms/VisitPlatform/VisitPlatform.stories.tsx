@@ -4,7 +4,7 @@ import { VisitPlatformProps } from './VisitPlatform.type';
 import VisitPlatform from '.';
 
 export default {
-  title: 'Design System/03-Organisms/Display/VisitPlatform',
+  title: 'Design System/03-Organisms/Report/VisitPlatform',
   component: VisitPlatform,
 } as Meta;
 

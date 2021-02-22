@@ -4,7 +4,7 @@ import { InquiryFormProps } from './InquiryForm.type';
 import InquiryForm from '.';
 
 export default {
-  title: 'Design System/03-Organisms/Display/InquiryForm',
+  title: 'Design System/03-Organisms/Support/InquiryForm',
   component: InquiryForm,
 } as Meta;
 

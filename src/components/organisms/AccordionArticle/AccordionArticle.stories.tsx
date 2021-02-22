@@ -8,7 +8,7 @@ import {
 import AccordionArticle from './index';
 
 export default {
-  title: 'Design System/03-Organisms/Display/AccordionArticle',
+  title: 'Design System/03-Organisms/Post/AccordionArticle',
   component: AccordionArticle,
   argTypes: {
     categories: { control: { type: 'object' }, defaultValue: dummyAccordionArticleCategory },

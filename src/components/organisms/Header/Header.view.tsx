@@ -1,7 +1,7 @@
 import React from 'react';
-import * as S from './Header.style';
-import MenuNavigation from '@molecules/MenuNavigation';
 import ImageIcon from '@atoms/ImageIcon';
+import Navigation from '@molecules/Navigation';
+import * as S from './Header.style';
 
 import { useTranslation } from '@helpers/i18n';
 
@@ -13,7 +13,10 @@ const HeaderView = () => {
       <div>
         <ImageIcon type="logo" />
       </div>
-      <MenuNavigation items2={[{ title: 'header.navigation.product' }, { title: 'header.navigation.login' }]} />
+      <Navigation
+        items={[{ title: t('header.navigation.product') }, { title: t('header.navigation.login') }]}
+        direction="horizontal"
+      />
     </S.Container>
   );
 };

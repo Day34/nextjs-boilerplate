@@ -4,7 +4,7 @@ import { ModalUpdateLinkProps } from './ModalUpdateLink.type';
 import ModalUpdateLink from '.';
 
 export default {
-  title: 'Design System/03-Organisms/Display/ModalUpdateLink',
+  title: 'Design System/03-Organisms/Popup/ModalUpdateLink',
   component: ModalUpdateLink,
   argTypes: {
     open: { control: { type: 'boolean' }, defaultValue: true },

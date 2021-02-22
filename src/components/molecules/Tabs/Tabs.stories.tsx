@@ -5,7 +5,7 @@ import Tabs from './index';
 import { TabsProps } from './Tabs.type';
 
 export default {
-  title: 'Design System/02-Molecules/Navigation/Tabs',
+  title: 'Design System/02-Molecules/Navigations/Tabs',
   component: Tabs,
   argTypes: {
     indicatorColor: {

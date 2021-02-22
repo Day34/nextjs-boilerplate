@@ -4,7 +4,7 @@ import Stepper from './index';
 import { StepperProps } from './Stepper.type';
 
 export default {
-  title: 'Design System/02-Molecules/Navigation/Stepper',
+  title: 'Design System/02-Molecules/Navigations/Stepper',
   component: Stepper,
   argTypes: {
     steps: {

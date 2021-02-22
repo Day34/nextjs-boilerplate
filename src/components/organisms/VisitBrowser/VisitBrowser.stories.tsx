@@ -4,7 +4,7 @@ import { VisitBrowserProps } from './VisitBrowser.type';
 import VisitBrowser from '.';
 
 export default {
-  title: 'Design System/03-Organisms/Display/VisitBrowser',
+  title: 'Design System/03-Organisms/Report/VisitBrowser',
   component: VisitBrowser,
 } as Meta;
 

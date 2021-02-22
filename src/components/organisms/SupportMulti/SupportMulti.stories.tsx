@@ -8,7 +8,7 @@ import {
 } from '@dummies/Supports';
 
 export default {
-  title: 'Design System/03-Organisms/Display/SupportMulti',
+  title: 'Design System/03-Organisms/Support/SupportMulti',
   component: SupportMulti,
   argTypes: {
     faqCategories: { control: { type: 'object' }, defaultValue: dummyAccordionArticleCategory },

@@ -4,7 +4,7 @@ import { LinkGeneratorStep2Props } from './LinkGeneratorStep2.type';
 import LinkGeneratorStep2 from './index';
 
 export default {
-  title: 'Design System/03-Organisms/Display/LinkGeneratorStep2',
+  title: 'Design System/03-Organisms/Link/LinkGeneratorStep2',
   component: LinkGeneratorStep2,
   argTypes: {
     sourceLink: { control: { type: 'text' }, defaultValue: 'http://한글.링크를.만들어.보.세요.com' },

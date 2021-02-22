@@ -4,7 +4,7 @@ import { PricingProps } from './Pricing.type';
 import Pricing from '.';
 
 export default {
-  title: 'Design System/03-Organisms/Display/Pricing',
+  title: 'Design System/03-Organisms/Payment/Pricing',
   component: Pricing,
 } as Meta;
 

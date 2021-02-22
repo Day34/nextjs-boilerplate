@@ -4,7 +4,7 @@ import { LinkListProps } from './LinkList.type';
 import LinkList from '.';
 
 export default {
-  title: 'Design System/03-Organisms/Display/LinkList',
+  title: 'Design System/03-Organisms/Account/LinkList',
   component: LinkList,
 } as Meta;
 

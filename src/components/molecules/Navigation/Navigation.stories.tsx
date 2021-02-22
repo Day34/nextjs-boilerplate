@@ -5,7 +5,7 @@ import Navigation from '.';
 import { NavigationProps } from './Navigation.type';
 
 export default {
-  title: 'Design System/02-Molecules/Navigation/Navigation',
+  title: 'Design System/02-Molecules/Navigations/Navigation',
   component: Navigation,
   argTypes: {
     direction: { control: { type: 'select', options: ['horizontal', 'vertical'] }, defaultValue: 'horizontal' },

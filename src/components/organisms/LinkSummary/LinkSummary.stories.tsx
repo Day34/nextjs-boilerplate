@@ -4,7 +4,7 @@ import { LinkSummaryProps } from './LinkSummary.type';
 import LinkSummary from '.';
 
 export default {
-  title: 'Design System/03-Organisms/Display/LinkSummary',
+  title: 'Design System/03-Organisms/Link/LinkSummary',
   component: LinkSummary,
 } as Meta;
 

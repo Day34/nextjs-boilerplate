@@ -4,7 +4,7 @@ import { LinkGeneratorProps } from './LinkGenerator.type';
 import LinkGenerator from '.';
 
 export default {
-  title: 'Design System/03-Organisms/Display/LinkGenerator',
+  title: 'Design System/03-Organisms/Link/LinkGenerator',
   component: LinkGenerator,
   argTypes: {
     nidaLink: { control: { type: 'text' }, defaultValue: 'http://한글.링크를.만들어.보.세요.com' },

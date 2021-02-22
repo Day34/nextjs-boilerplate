@@ -4,7 +4,7 @@ import { LinkGeneratorStep1Props } from './LinkGeneratorStep1.type';
 import LinkGeneratorStep1 from './index';
 
 export default {
-  title: 'Design System/03-Organisms/Display/LinkGeneratorStep1',
+  title: 'Design System/03-Organisms/Link/LinkGeneratorStep1',
   component: LinkGeneratorStep1,
   argTypes: {
     sourceLink: { control: { type: 'text' }, defaultValue: '' },

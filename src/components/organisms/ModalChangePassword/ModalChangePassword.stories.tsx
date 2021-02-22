@@ -4,7 +4,7 @@ import { ModalChangePasswordProps } from './ModalChangePassword.type';
 import ModalChangePassword from '.';
 
 export default {
-  title: 'Design System/03-Organisms/Display/ModalChangePassword',
+  title: 'Design System/03-Organisms/Popup/ModalChangePassword',
   component: ModalChangePassword,
   argTypes: {
     open: { control: { type: 'boolean' }, defaultValue: true },

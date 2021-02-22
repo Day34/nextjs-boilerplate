@@ -4,7 +4,7 @@ import { SignUpFormProps } from './SignUpForm.type';
 import SignUpForm from '.';
 
 export default {
-  title: 'Design System/03-Organisms/Display/SignUpForm',
+  title: 'Design System/03-Organisms/Auth/SignUpForm',
   component: SignUpForm,
 } as Meta;
 

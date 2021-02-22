@@ -10,7 +10,7 @@ import Sidebar from '.';
 import { SidebarProps } from './Sidebar.type';
 
 export default {
-  title: 'Design System/02-Molecules/Navigation/Sidebar',
+  title: 'Design System/02-Molecules/Navigations/Sidebar',
   component: Sidebar,
   argTypes: {
     depthStep: {

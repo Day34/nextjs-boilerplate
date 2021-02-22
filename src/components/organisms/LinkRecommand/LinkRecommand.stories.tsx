@@ -5,7 +5,7 @@ import LinkRecommand from '.';
 import { LinkRcommand as dummyLinkRcommand } from '@dummies/Link';
 
 export default {
-  title: 'Design System/03-Organisms/Display/LinkRecommand',
+  title: 'Design System/03-Organisms/Link/LinkRecommand',
   component: LinkRecommand,
   argTypes: {
     rows: { control: { type: 'object' }, defaultValue: dummyLinkRcommand },
